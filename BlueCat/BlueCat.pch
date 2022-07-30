@@ -1,0 +1,24 @@
+//
+//  BlueCat.pch
+//  BlueCat
+//
+//  Created by Tony on 2022/7/30.
+//
+
+#ifndef BlueCat_pch
+#define BlueCat_pch
+
+#define kSCREEN_WIDTH       [UIScreen mainScreen].bounds.size.width
+#define kSCREEN_HEIGHT      [UIScreen mainScreen].bounds.size.height
+#define kScreenRect         [UIScreen mainScreen].bounds
+#define NAVIGATION_HEIGHT   (CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]) + CGRectGetHeight(self.navigationController.navigationBar.frame))
+#define kNavBar_height      ([ZLJDeviceUtil isIPhoneXSeries] ? 88 : 64)
+#define StatusBar_HEIGHT    CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame])
+#define TabBar_HEIGHT       ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define Bottom_HEIGHT       ([[UIApplication sharedApplication] statusBarFrame].size.height>20?34:0)
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* BlueCat_pch */

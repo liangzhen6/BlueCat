@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AB0656128951616008911F6 /* BLCaptureRouteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0656028951616008911F6 /* BLCaptureRouteModel.m */; };
+		0ACA05BD2894D59600546E8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05BC2894D59600546E8F /* AppDelegate.m */; };
+		0ACA05C02894D59600546E8F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05BF2894D59600546E8F /* SceneDelegate.m */; };
+		0ACA05C32894D59600546E8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05C22894D59600546E8F /* ViewController.m */; };
+		0ACA05C62894D59600546E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA05C42894D59600546E8F /* Main.storyboard */; };
+		0ACA05C82894D59600546E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA05C72894D59600546E8F /* Assets.xcassets */; };
+		0ACA05CB2894D59600546E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA05C92894D59600546E8F /* LaunchScreen.storyboard */; };
+		0ACA05CE2894D59600546E8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05CD2894D59600546E8F /* main.m */; };
+		0ACA05D82894D59600546E8F /* BlueCatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05D72894D59600546E8F /* BlueCatTests.m */; };
+		0ACA05E22894D59600546E8F /* BlueCatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05E12894D59600546E8F /* BlueCatUITests.m */; };
+		0ACA05E42894D59600546E8F /* BlueCatUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05E32894D59600546E8F /* BlueCatUITestsLaunchTests.m */; };
+		0ACA05F22894D79E00546E8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05F12894D79E00546E8F /* BaseViewController.m */; };
+		0ACA05F52894D7C300546E8F /* BLPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05F42894D7C300546E8F /* BLPlayViewController.m */; };
+		0ACA05FA2894DA7200546E8F /* BLBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05F92894DA7200546E8F /* BLBaseView.m */; };
+		0ACA05FD2894DAB900546E8F /* BLCaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05FC2894DAB900546E8F /* BLCaptureView.m */; };
+		0ACA06002894DBAD00546E8F /* BLActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05FF2894DBAD00546E8F /* BLActivityManager.m */; };
+		0ACA06032894DCED00546E8F /* BLMainPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA06022894DCED00546E8F /* BLMainPlayView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ACA05D42894D59600546E8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ACA05B02894D59600546E8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ACA05B72894D59600546E8F;
+			remoteInfo = BlueCat;
+		};
+		0ACA05DE2894D59600546E8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ACA05B02894D59600546E8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ACA05B72894D59600546E8F;
+			remoteInfo = BlueCat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AB0655F28951616008911F6 /* BLCaptureRouteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCaptureRouteModel.h; sourceTree = "<group>"; };
+		0AB0656028951616008911F6 /* BLCaptureRouteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCaptureRouteModel.m; sourceTree = "<group>"; };
+		0ACA05B82894D59600546E8F /* BlueCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACA05BB2894D59600546E8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0ACA05BC2894D59600546E8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0ACA05BE2894D59600546E8F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		0ACA05BF2894D59600546E8F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		0ACA05C12894D59600546E8F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0ACA05C22894D59600546E8F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0ACA05C52894D59600546E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0ACA05C72894D59600546E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0ACA05CA2894D59600546E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0ACA05CC2894D59600546E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ACA05CD2894D59600546E8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0ACA05D32894D59600546E8F /* BlueCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACA05D72894D59600546E8F /* BlueCatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueCatTests.m; sourceTree = "<group>"; };
+		0ACA05DD2894D59600546E8F /* BlueCatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueCatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACA05E12894D59600546E8F /* BlueCatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueCatUITests.m; sourceTree = "<group>"; };
+		0ACA05E32894D59600546E8F /* BlueCatUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueCatUITestsLaunchTests.m; sourceTree = "<group>"; };
+		0ACA05F02894D79E00546E8F /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0ACA05F12894D79E00546E8F /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		0ACA05F32894D7C300546E8F /* BLPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLPlayViewController.h; sourceTree = "<group>"; };
+		0ACA05F42894D7C300546E8F /* BLPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLPlayViewController.m; sourceTree = "<group>"; };
+		0ACA05F82894DA7200546E8F /* BLBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLBaseView.h; sourceTree = "<group>"; };
+		0ACA05F92894DA7200546E8F /* BLBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLBaseView.m; sourceTree = "<group>"; };
+		0ACA05FB2894DAB900546E8F /* BLCaptureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCaptureView.h; sourceTree = "<group>"; };
+		0ACA05FC2894DAB900546E8F /* BLCaptureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCaptureView.m; sourceTree = "<group>"; };
+		0ACA05FE2894DBAD00546E8F /* BLActivityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLActivityManager.h; sourceTree = "<group>"; };
+		0ACA05FF2894DBAD00546E8F /* BLActivityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLActivityManager.m; sourceTree = "<group>"; };
+		0ACA06012894DCED00546E8F /* BLMainPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLMainPlayView.h; sourceTree = "<group>"; };
+		0ACA06022894DCED00546E8F /* BLMainPlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLMainPlayView.m; sourceTree = "<group>"; };
+		0ACA06042894E1D000546E8F /* BlueCat.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueCat.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0ACA05B52894D59600546E8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACA05D02894D59600546E8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACA05DA2894D59600546E8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AB0656228951F24008911F6 /* ActiveityManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0655F28951616008911F6 /* BLCaptureRouteModel.h */,
+				0AB0656028951616008911F6 /* BLCaptureRouteModel.m */,
+				0ACA05FE2894DBAD00546E8F /* BLActivityManager.h */,
+				0ACA05FF2894DBAD00546E8F /* BLActivityManager.m */,
+			);
+			path = ActiveityManager;
+			sourceTree = "<group>";
+		};
+		0AB0656328951F48008911F6 /* MainPlay */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA05F32894D7C300546E8F /* BLPlayViewController.h */,
+				0ACA05F42894D7C300546E8F /* BLPlayViewController.m */,
+				0ACA05FB2894DAB900546E8F /* BLCaptureView.h */,
+				0ACA05FC2894DAB900546E8F /* BLCaptureView.m */,
+				0ACA06012894DCED00546E8F /* BLMainPlayView.h */,
+				0ACA06022894DCED00546E8F /* BLMainPlayView.m */,
+			);
+			path = MainPlay;
+			sourceTree = "<group>";
+		};
+		0ACA05AF2894D59600546E8F = {
+			isa = PBXGroup;
+			children = (
+				0ACA05BA2894D59600546E8F /* BlueCat */,
+				0ACA05D62894D59600546E8F /* BlueCatTests */,
+				0ACA05E02894D59600546E8F /* BlueCatUITests */,
+				0ACA05B92894D59600546E8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0ACA05B92894D59600546E8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA05B82894D59600546E8F /* BlueCat.app */,
+				0ACA05D32894D59600546E8F /* BlueCatTests.xctest */,
+				0ACA05DD2894D59600546E8F /* BlueCatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0ACA05BA2894D59600546E8F /* BlueCat */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA05BB2894D59600546E8F /* AppDelegate.h */,
+				0ACA05BC2894D59600546E8F /* AppDelegate.m */,
+				0ACA05BE2894D59600546E8F /* SceneDelegate.h */,
+				0ACA05BF2894D59600546E8F /* SceneDelegate.m */,
+				0ACA05F62894D88B00546E8F /* Base */,
+				0ACA05F72894D8A400546E8F /* Main */,
+				0ACA05C42894D59600546E8F /* Main.storyboard */,
+				0ACA06042894E1D000546E8F /* BlueCat.pch */,
+				0ACA05C72894D59600546E8F /* Assets.xcassets */,
+				0ACA05C92894D59600546E8F /* LaunchScreen.storyboard */,
+				0ACA05CC2894D59600546E8F /* Info.plist */,
+				0ACA05CD2894D59600546E8F /* main.m */,
+			);
+			path = BlueCat;
+			sourceTree = "<group>";
+		};
+		0ACA05D62894D59600546E8F /* BlueCatTests */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA05D72894D59600546E8F /* BlueCatTests.m */,
+			);
+			path = BlueCatTests;
+			sourceTree = "<group>";
+		};
+		0ACA05E02894D59600546E8F /* BlueCatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA05E12894D59600546E8F /* BlueCatUITests.m */,
+				0ACA05E32894D59600546E8F /* BlueCatUITestsLaunchTests.m */,
+			);
+			path = BlueCatUITests;
+			sourceTree = "<group>";
+		};
+		0ACA05F62894D88B00546E8F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA05C12894D59600546E8F /* ViewController.h */,
+				0ACA05C22894D59600546E8F /* ViewController.m */,
+				0ACA05F82894DA7200546E8F /* BLBaseView.h */,
+				0ACA05F92894DA7200546E8F /* BLBaseView.m */,
+				0ACA05F02894D79E00546E8F /* BaseViewController.h */,
+				0ACA05F12894D79E00546E8F /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0ACA05F72894D8A400546E8F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0656328951F48008911F6 /* MainPlay */,
+				0AB0656228951F24008911F6 /* ActiveityManager */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0ACA05B72894D59600546E8F /* BlueCat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ACA05E72894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCat" */;
+			buildPhases = (
+				0ACA05B42894D59600546E8F /* Sources */,
+				0ACA05B52894D59600546E8F /* Frameworks */,
+				0ACA05B62894D59600546E8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueCat;
+			productName = BlueCat;
+			productReference = 0ACA05B82894D59600546E8F /* BlueCat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0ACA05D22894D59600546E8F /* BlueCatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ACA05EA2894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCatTests" */;
+			buildPhases = (
+				0ACA05CF2894D59600546E8F /* Sources */,
+				0ACA05D02894D59600546E8F /* Frameworks */,
+				0ACA05D12894D59600546E8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ACA05D52894D59600546E8F /* PBXTargetDependency */,
+			);
+			name = BlueCatTests;
+			productName = BlueCatTests;
+			productReference = 0ACA05D32894D59600546E8F /* BlueCatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0ACA05DC2894D59600546E8F /* BlueCatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ACA05ED2894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCatUITests" */;
+			buildPhases = (
+				0ACA05D92894D59600546E8F /* Sources */,
+				0ACA05DA2894D59600546E8F /* Frameworks */,
+				0ACA05DB2894D59600546E8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ACA05DF2894D59600546E8F /* PBXTargetDependency */,
+			);
+			name = BlueCatUITests;
+			productName = BlueCatUITests;
+			productReference = 0ACA05DD2894D59600546E8F /* BlueCatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0ACA05B02894D59600546E8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					0ACA05B72894D59600546E8F = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					0ACA05D22894D59600546E8F = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 0ACA05B72894D59600546E8F;
+					};
+					0ACA05DC2894D59600546E8F = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 0ACA05B72894D59600546E8F;
+					};
+				};
+			};
+			buildConfigurationList = 0ACA05B32894D59600546E8F /* Build configuration list for PBXProject "BlueCat" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0ACA05AF2894D59600546E8F;
+			productRefGroup = 0ACA05B92894D59600546E8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0ACA05B72894D59600546E8F /* BlueCat */,
+				0ACA05D22894D59600546E8F /* BlueCatTests */,
+				0ACA05DC2894D59600546E8F /* BlueCatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0ACA05B62894D59600546E8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACA05CB2894D59600546E8F /* LaunchScreen.storyboard in Resources */,
+				0ACA05C82894D59600546E8F /* Assets.xcassets in Resources */,
+				0ACA05C62894D59600546E8F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACA05D12894D59600546E8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACA05DB2894D59600546E8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ACA05B42894D59600546E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACA05F52894D7C300546E8F /* BLPlayViewController.m in Sources */,
+				0ACA05C32894D59600546E8F /* ViewController.m in Sources */,
+				0ACA06002894DBAD00546E8F /* BLActivityManager.m in Sources */,
+				0ACA05F22894D79E00546E8F /* BaseViewController.m in Sources */,
+				0ACA05BD2894D59600546E8F /* AppDelegate.m in Sources */,
+				0ACA05CE2894D59600546E8F /* main.m in Sources */,
+				0ACA05C02894D59600546E8F /* SceneDelegate.m in Sources */,
+				0ACA05FA2894DA7200546E8F /* BLBaseView.m in Sources */,
+				0ACA05FD2894DAB900546E8F /* BLCaptureView.m in Sources */,
+				0ACA06032894DCED00546E8F /* BLMainPlayView.m in Sources */,
+				0AB0656128951616008911F6 /* BLCaptureRouteModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACA05CF2894D59600546E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACA05D82894D59600546E8F /* BlueCatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ACA05D92894D59600546E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACA05E22894D59600546E8F /* BlueCatUITests.m in Sources */,
+				0ACA05E42894D59600546E8F /* BlueCatUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ACA05D52894D59600546E8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ACA05B72894D59600546E8F /* BlueCat */;
+			targetProxy = 0ACA05D42894D59600546E8F /* PBXContainerItemProxy */;
+		};
+		0ACA05DF2894D59600546E8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ACA05B72894D59600546E8F /* BlueCat */;
+			targetProxy = 0ACA05DE2894D59600546E8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0ACA05C42894D59600546E8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ACA05C52894D59600546E8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0ACA05C92894D59600546E8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ACA05CA2894D59600546E8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0ACA05E52894D59600546E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0ACA05E62894D59600546E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0ACA05E82894D59600546E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DZ7M4562PX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BlueCat/BlueCat.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueCat/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = GeneralApp_dev;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0ACA05E92894D59600546E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DZ7M4562PX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BlueCat/BlueCat.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueCat/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = GeneralApp_dev;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0ACA05EB2894D59600546E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueCat.app/BlueCat";
+			};
+			name = Debug;
+		};
+		0ACA05EC2894D59600546E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueCat.app/BlueCat";
+			};
+			name = Release;
+		};
+		0ACA05EE2894D59600546E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlueCat;
+			};
+			name = Debug;
+		};
+		0ACA05EF2894D59600546E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlueCat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ACA05B32894D59600546E8F /* Build configuration list for PBXProject "BlueCat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACA05E52894D59600546E8F /* Debug */,
+				0ACA05E62894D59600546E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ACA05E72894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACA05E82894D59600546E8F /* Debug */,
+				0ACA05E92894D59600546E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ACA05EA2894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACA05EB2894D59600546E8F /* Debug */,
+				0ACA05EC2894D59600546E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ACA05ED2894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ACA05EE2894D59600546E8F /* Debug */,
+				0ACA05EF2894D59600546E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0ACA05B02894D59600546E8F /* Project object */;
+}
