@@ -9,6 +9,7 @@
 #import "BLMainPlayView.h"
 #import "BLCaptureView.h"
 #import "BLCaptureRouteModel.h"
+#import "BLActivitySetting.h"
 
 typedef NS_ENUM(NSUInteger, TimerActionType) {
     TimerActionTypeuUnknown = 0,
@@ -19,6 +20,8 @@ typedef NS_ENUM(NSUInteger, TimerActionType) {
 
 @interface BLActivityManager ()<CaptureViewChangeDelegate>
 @property (nonatomic, readwrite) BLMainPlayView *mainPlayView;
+@property (nonatomic, readwrite) BLActivitySetting *setting;
+
 @property (nonatomic, strong) NSTimer *tickTimer;
 @property (nonatomic, strong) NSMutableArray * sourceDataM;
 
@@ -37,24 +40,33 @@ static BLActivityManager * _manager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _manager = [[BLActivityManager alloc] init];
+        [_manager buildSetting];
     });
     return _manager;
 }
 
+- (void)buildSetting {
+    self.setting = [BLActivitySetting getActivitySetting];
+}
 
 - (void)buildMainPlayView {
-    CGFloat captureViewW = 80;
-    CGFloat captureViewH = 80;
+    CGFloat captureViewW = self.setting.captureW;
+    CGFloat captureViewH = self.setting.captureH;
     BLCaptureView *captureView = [[BLCaptureView alloc] initWithFrame:CGRectMake((kSCREEN_WIDTH - captureViewW)/2, (kSCREEN_HEIGHT - captureViewH)/2, captureViewW, captureViewH)];
-    [captureView buildView];
+    [captureView buildViewWithBackImageName:self.setting.captureImage];
     
     BLMainPlayView *mainPlayView = [[BLMainPlayView alloc] initWithFrame:kScreenRect];
     mainPlayView.delegate = self;
-    [mainPlayView buildViewWith:captureView];
+    [mainPlayView buildViewWith:captureView backImageName:self.setting.mainImage];
     
     self.mainPlayView = mainPlayView;
     
     self.canDrag = YES;
+}
+
+- (void)dectoryMainPlayView {
+    [self tickTimerStart:NO];
+    self.mainPlayView = nil;
 }
 
 
@@ -101,22 +113,22 @@ static BLActivityManager * _manager;
 }
 
 - (void)captureViewDragStateChange:(CaptureViewDragState)state {
-    
-    if (state == CaptureViewDragStateBegin) {
-        [self.sourceDataM removeAllObjects];
-        self.timerType = TimerActionTypeRecord;
-        self.canRecord = YES;
-        self.canDrag = YES;
-        [self tickTimerStart:YES];
-        
-    } else if (state == CaptureViewDragStateEnd) {
-        self.timerType = TimerActionTypePlay;
-        self.canRecord = NO;
-        self.canDrag = NO;
-        [self tickTimerStart:YES];
-        self.count = - 1;
+    if (self.setting.autoMode) {
+        if (state == CaptureViewDragStateBegin) {
+            [self.sourceDataM removeAllObjects];
+            self.timerType = TimerActionTypeRecord;
+            self.canRecord = YES;
+            self.canDrag = YES;
+            [self tickTimerStart:YES];
+            
+        } else if (state == CaptureViewDragStateEnd) {
+            self.timerType = TimerActionTypePlay;
+            self.canRecord = NO;
+            self.canDrag = NO;
+            [self tickTimerStart:YES];
+            self.count = - 1;
+        }
     }
-    
 }
 
 
@@ -164,7 +176,7 @@ static BLActivityManager * _manager;
 
 - (NSTimer *)tickTimer {
     if (_tickTimer == nil) {
-        _tickTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(tickTimerAction) userInfo:nil repeats:YES];
+        _tickTimer = [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(tickTimerAction) userInfo:nil repeats:YES];
         _tickTimer.fireDate = [NSDate distantFuture];
         [[NSRunLoop mainRunLoop] addTimer:_tickTimer forMode:NSRunLoopCommonModes];
     }

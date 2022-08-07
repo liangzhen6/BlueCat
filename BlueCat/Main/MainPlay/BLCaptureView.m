@@ -7,14 +7,34 @@
 
 #import "BLCaptureView.h"
 
+@interface BLCaptureView ()
+@property (nonatomic, strong) UIImageView *backImageView;
+
+@end
+
 @implementation BLCaptureView
 
 - (void)buildView {
-    self.backgroundColor = [UIColor greenColor];
+    UIImageView *backImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    backImageView.contentMode = UIViewContentModeScaleToFill;
+    backImageView.image = [UIImage imageNamed:@"football"];
+    [self addSubview:backImageView];
+    self.backImageView = backImageView;
+}
+
+- (void)buildViewWithBackImageName:(NSString *)name {
+    [self buildView];
     
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 5, 10, 10)];
-    headView.backgroundColor = [UIColor redColor];
-    [self addSubview:headView];
+    UIImage * backImage = [UIImage imageNamed:name];
+    if (!backImage) {
+        NSString *path = [kDocument stringByAppendingPathComponent:name];
+        NSData *imageData = [NSData dataWithContentsOfFile:path];
+        backImage = [UIImage imageWithData:imageData];
+    }
+    
+    if (backImage) {
+        self.backImageView.image = backImage;
+    }
 }
 
 /*

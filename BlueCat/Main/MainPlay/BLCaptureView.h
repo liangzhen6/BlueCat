@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)buildView;
 
+- (void)buildViewWithBackImageName:(NSString *)name;
+
 @end
 
 NS_ASSUME_NONNULL_END

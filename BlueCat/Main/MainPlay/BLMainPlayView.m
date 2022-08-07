@@ -10,19 +10,41 @@
 @interface BLMainPlayView ()
 @property (nonatomic, strong) BLCaptureView *captureView;
 @property (nonatomic, assign) CaptureViewDragState state;
+@property (nonatomic, strong) UIImageView *backImageView;
 @end
 
 @implementation BLMainPlayView
 
 - (void)buildViewWith:(BLCaptureView *)captureView {
-    self.backgroundColor = [UIColor redColor];
-    [self addSubview:captureView];
+//    self.backgroundColor = [UIColor redColor];
+    UIImageView *backImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    backImageView.contentMode = UIViewContentModeScaleAspectFill;
+    backImageView.image = [UIImage imageNamed:@"footballField"];
+    [self addSubview:backImageView];
+    self.backImageView = backImageView;
     
+    [self addSubview:captureView];
     self.captureView = captureView;
     
     UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragViewDidDrag:)];
     [captureView addGestureRecognizer:pan];
 }
+
+- (void)buildViewWith:(BLCaptureView *)captureView backImageName:(NSString *)name {
+    [self buildViewWith:captureView];
+    
+    UIImage * backImage = [UIImage imageNamed:name];
+    if (!backImage) {
+        NSString *path = [kDocument stringByAppendingPathComponent:name];
+        NSData *imageData = [NSData dataWithContentsOfFile:path];
+        backImage = [UIImage imageWithData:imageData];
+    }
+    
+    if (backImage) {
+        self.backImageView.image = backImage;
+    }
+}
+
 
 - (void)dragViewDidDrag:(UIPanGestureRecognizer *)pan {
     CGPoint translation = [pan translationInView:self];
@@ -55,7 +77,6 @@
         }
     }
 }
-
 
 
 - (void)updateCaptureViewCenter:(CGPoint)center angle:(double)angle {

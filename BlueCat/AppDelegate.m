@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[BLActivityManager shareManager] buildMainPlayView];
+    [BLActivityManager shareManager];
     
     return YES;
 }

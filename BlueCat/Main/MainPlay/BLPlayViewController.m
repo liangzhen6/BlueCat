@@ -18,9 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addSubview:[BLActivityManager shareManager].mainPlayView];
+    BLMainPlayView *mainView = [BLActivityManager shareManager].mainPlayView;
+    [self.view addSubview:mainView];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backAction)];
+    tap.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view.
+}
+
+
+- (void)backAction {
+    [[BLActivityManager shareManager] dectoryMainPlayView];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 /*

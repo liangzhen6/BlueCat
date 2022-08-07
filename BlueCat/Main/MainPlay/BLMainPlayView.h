@@ -32,6 +32,8 @@ typedef NS_ENUM(NSUInteger, CaptureViewDragState) {
 
 - (void)buildViewWith:(BLCaptureView *)captureView;
 
+- (void)buildViewWith:(BLCaptureView *)captureView backImageName:(NSString *)name;
+
 - (void)updateCaptureViewCenter:(CGPoint)center angle:(double)angle;
 
 @end

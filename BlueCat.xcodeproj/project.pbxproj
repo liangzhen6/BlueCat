@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4B5757289F6B3300977CEE /* BLActivitySetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B5756289F6B3300977CEE /* BLActivitySetting.m */; };
 		0AB0656128951616008911F6 /* BLCaptureRouteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0656028951616008911F6 /* BLCaptureRouteModel.m */; };
 		0ACA05BD2894D59600546E8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05BC2894D59600546E8F /* AppDelegate.m */; };
 		0ACA05C02894D59600546E8F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05BF2894D59600546E8F /* SceneDelegate.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4B5755289F6B3300977CEE /* BLActivitySetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLActivitySetting.h; sourceTree = "<group>"; };
+		0A4B5756289F6B3300977CEE /* BLActivitySetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLActivitySetting.m; sourceTree = "<group>"; };
 		0AB0655F28951616008911F6 /* BLCaptureRouteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCaptureRouteModel.h; sourceTree = "<group>"; };
 		0AB0656028951616008911F6 /* BLCaptureRouteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCaptureRouteModel.m; sourceTree = "<group>"; };
 		0ACA05B82894D59600546E8F /* BlueCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +113,8 @@
 				0AB0656028951616008911F6 /* BLCaptureRouteModel.m */,
 				0ACA05FE2894DBAD00546E8F /* BLActivityManager.h */,
 				0ACA05FF2894DBAD00546E8F /* BLActivityManager.m */,
+				0A4B5755289F6B3300977CEE /* BLActivitySetting.h */,
+				0A4B5756289F6B3300977CEE /* BLActivitySetting.m */,
 			);
 			path = ActiveityManager;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				0ACA05BD2894D59600546E8F /* AppDelegate.m in Sources */,
 				0ACA05CE2894D59600546E8F /* main.m in Sources */,
 				0ACA05C02894D59600546E8F /* SceneDelegate.m in Sources */,
+				0A4B5757289F6B3300977CEE /* BLActivitySetting.m in Sources */,
 				0ACA05FA2894DA7200546E8F /* BLBaseView.m in Sources */,
 				0ACA05FD2894DAB900546E8F /* BLCaptureView.m in Sources */,
 				0ACA06032894DCED00546E8F /* BLMainPlayView.m in Sources */,

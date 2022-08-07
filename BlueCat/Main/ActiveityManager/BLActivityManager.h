@@ -8,13 +8,16 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class BLMainPlayView;
+@class BLMainPlayView, BLActivitySetting;
 @interface BLActivityManager : NSObject
 @property (nonatomic, readonly) BLMainPlayView *mainPlayView;
+@property (nonatomic, readonly) BLActivitySetting *setting;
 
 + (BLActivityManager *)shareManager;
 
 - (void)buildMainPlayView;
+
+- (void)dectoryMainPlayView;
 
 @end
 
