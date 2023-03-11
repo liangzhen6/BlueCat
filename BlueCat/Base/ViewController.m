@@ -9,6 +9,9 @@
 #import "BLPlayViewController.h"
 #import "BLActivityManager.h"
 #import "BLActivitySetting.h"
+#import "BLSettingViewController.h"
+#import <UMCommon/MobClick.h>
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *autoModeSwitch;
@@ -26,17 +29,19 @@
     [BLActivityManager shareManager].setting.autoMode = sender.isOn;
 }
 
-- (IBAction)settingAction:(UIButton *)sender {
-    
-    
-}
-
 
 - (IBAction)enterGameAction:(id)sender {
     [[BLActivityManager shareManager] buildMainPlayView];
     BLPlayViewController *playViewController = [[BLPlayViewController alloc] init];
     playViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
     [self presentViewController:playViewController animated:YES completion:nil];
+    
+    [MobClick event:@"enterfootball"];
+    
+}
+- (IBAction)backAction:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end

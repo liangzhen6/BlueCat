@@ -1,0 +1,6 @@
+framework module Pods_BlueCat {
+  umbrella header "Pods-BlueCat-umbrella.h"
+
+  export *
+  module * { export * }
+}

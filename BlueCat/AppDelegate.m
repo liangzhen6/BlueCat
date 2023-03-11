@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "BLActivityManager.h"
+#import <UMCommon/UMCommon.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,8 @@
     // Override point for customization after application launch.
     [BLActivityManager shareManager];
     
+    [UMConfigure initWithAppkey:@"640cce49ba6a5259c41b4408" channel:@"App Store"];
+    
     return YES;
 }
 
@@ -27,6 +30,8 @@
 
 
 - (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+    
+    
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
     return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];

@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2532E529BD0BBD0028876C /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2532E429BD0BBD0028876C /* check.json */; };
 		0A4B5757289F6B3300977CEE /* BLActivitySetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B5756289F6B3300977CEE /* BLActivitySetting.m */; };
+		0A98B4DB28BA3228001EE6FA /* BLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A98B4DA28BA3228001EE6FA /* BLSettingViewController.m */; };
+		0A98B4DE28BA35CE001EE6FA /* BLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A98B4DD28BA35CE001EE6FA /* BLTools.m */; };
 		0AB0656128951616008911F6 /* BLCaptureRouteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0656028951616008911F6 /* BLCaptureRouteModel.m */; };
+		0AC9BD4B29BCCDE700E83C6E /* EnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9BD4A29BCCDE700E83C6E /* EnterViewController.m */; };
+		0AC9BD4E29BCDD5100E83C6E /* HitMouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9BD4D29BCDD5100E83C6E /* HitMouseViewController.m */; };
+		0AC9BD5129BCEC1600E83C6E /* HitMouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9BD5029BCEC1600E83C6E /* HitMouseView.m */; };
 		0ACA05BD2894D59600546E8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05BC2894D59600546E8F /* AppDelegate.m */; };
 		0ACA05C02894D59600546E8F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05BF2894D59600546E8F /* SceneDelegate.m */; };
 		0ACA05C32894D59600546E8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05C22894D59600546E8F /* ViewController.m */; };
@@ -25,6 +31,9 @@
 		0ACA05FD2894DAB900546E8F /* BLCaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05FC2894DAB900546E8F /* BLCaptureView.m */; };
 		0ACA06002894DBAD00546E8F /* BLActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA05FF2894DBAD00546E8F /* BLActivityManager.m */; };
 		0ACA06032894DCED00546E8F /* BLMainPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA06022894DCED00546E8F /* BLMainPlayView.m */; };
+		1EF45B23DA1E410E8C71CF95 /* Pods_BlueCat_BlueCatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B983E2251D2B4FEBCEC1A739 /* Pods_BlueCat_BlueCatUITests.framework */; };
+		6BDF28F71319D5A23ED78949 /* Pods_BlueCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D550BDC4323054EC2F74EB4E /* Pods_BlueCat.framework */; };
+		A934CE5D6BB0FEDF48AEBC87 /* Pods_BlueCatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B29C65B13737745E9AF488 /* Pods_BlueCatTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +54,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2532E429BD0BBD0028876C /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
 		0A4B5755289F6B3300977CEE /* BLActivitySetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLActivitySetting.h; sourceTree = "<group>"; };
 		0A4B5756289F6B3300977CEE /* BLActivitySetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLActivitySetting.m; sourceTree = "<group>"; };
+		0A98B4D928BA3228001EE6FA /* BLSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLSettingViewController.h; sourceTree = "<group>"; };
+		0A98B4DA28BA3228001EE6FA /* BLSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLSettingViewController.m; sourceTree = "<group>"; };
+		0A98B4DC28BA35CE001EE6FA /* BLTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLTools.h; sourceTree = "<group>"; };
+		0A98B4DD28BA35CE001EE6FA /* BLTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLTools.m; sourceTree = "<group>"; };
 		0AB0655F28951616008911F6 /* BLCaptureRouteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCaptureRouteModel.h; sourceTree = "<group>"; };
 		0AB0656028951616008911F6 /* BLCaptureRouteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCaptureRouteModel.m; sourceTree = "<group>"; };
+		0AC9BD4929BCCDE700E83C6E /* EnterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterViewController.h; sourceTree = "<group>"; };
+		0AC9BD4A29BCCDE700E83C6E /* EnterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterViewController.m; sourceTree = "<group>"; };
+		0AC9BD4C29BCDD5100E83C6E /* HitMouseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitMouseViewController.h; sourceTree = "<group>"; };
+		0AC9BD4D29BCDD5100E83C6E /* HitMouseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitMouseViewController.m; sourceTree = "<group>"; };
+		0AC9BD4F29BCEC1600E83C6E /* HitMouseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitMouseView.h; sourceTree = "<group>"; };
+		0AC9BD5029BCEC1600E83C6E /* HitMouseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitMouseView.m; sourceTree = "<group>"; };
 		0ACA05B82894D59600546E8F /* BlueCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACA05BB2894D59600546E8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ACA05BC2894D59600546E8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +99,15 @@
 		0ACA06012894DCED00546E8F /* BLMainPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLMainPlayView.h; sourceTree = "<group>"; };
 		0ACA06022894DCED00546E8F /* BLMainPlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLMainPlayView.m; sourceTree = "<group>"; };
 		0ACA06042894E1D000546E8F /* BlueCat.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueCat.pch; sourceTree = "<group>"; };
+		4FFCDAE07FAC7155B585AD7D /* Pods-BlueCat-BlueCatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCat-BlueCatUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlueCat-BlueCatUITests/Pods-BlueCat-BlueCatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		76F3E0CEB772C8C801D442B2 /* Pods-BlueCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCat.release.xcconfig"; path = "Target Support Files/Pods-BlueCat/Pods-BlueCat.release.xcconfig"; sourceTree = "<group>"; };
+		B2B29C65B13737745E9AF488 /* Pods_BlueCatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueCatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B983E2251D2B4FEBCEC1A739 /* Pods_BlueCat_BlueCatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueCat_BlueCatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D550BDC4323054EC2F74EB4E /* Pods_BlueCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D697C0675E3F9734BB7D5B69 /* Pods-BlueCatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCatTests.release.xcconfig"; path = "Target Support Files/Pods-BlueCatTests/Pods-BlueCatTests.release.xcconfig"; sourceTree = "<group>"; };
+		E06BE979B62425A1D8695C0F /* Pods-BlueCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCat.debug.xcconfig"; path = "Target Support Files/Pods-BlueCat/Pods-BlueCat.debug.xcconfig"; sourceTree = "<group>"; };
+		E5C1DB069294DD18F4F2CF83 /* Pods-BlueCat-BlueCatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCat-BlueCatUITests.release.xcconfig"; path = "Target Support Files/Pods-BlueCat-BlueCatUITests/Pods-BlueCat-BlueCatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E91E4420A7F3F29185B29B1C /* Pods-BlueCatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCatTests.debug.xcconfig"; path = "Target Support Files/Pods-BlueCatTests/Pods-BlueCatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDF28F71319D5A23ED78949 /* Pods_BlueCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A934CE5D6BB0FEDF48AEBC87 /* Pods_BlueCatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF45B23DA1E410E8C71CF95 /* Pods_BlueCat_BlueCatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +147,8 @@
 				0ACA05FF2894DBAD00546E8F /* BLActivityManager.m */,
 				0A4B5755289F6B3300977CEE /* BLActivitySetting.h */,
 				0A4B5756289F6B3300977CEE /* BLActivitySetting.m */,
+				0A98B4D928BA3228001EE6FA /* BLSettingViewController.h */,
+				0A98B4DA28BA3228001EE6FA /* BLSettingViewController.m */,
 			);
 			path = ActiveityManager;
 			sourceTree = "<group>";
@@ -139,6 +173,8 @@
 				0ACA05D62894D59600546E8F /* BlueCatTests */,
 				0ACA05E02894D59600546E8F /* BlueCatUITests */,
 				0ACA05B92894D59600546E8F /* Products */,
+				F9413D15D0299585B72000E4 /* Pods */,
+				A7F7D5D98E69826545B61303 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,10 +191,13 @@
 		0ACA05BA2894D59600546E8F /* BlueCat */ = {
 			isa = PBXGroup;
 			children = (
+				0A2532E429BD0BBD0028876C /* check.json */,
 				0ACA05BB2894D59600546E8F /* AppDelegate.h */,
 				0ACA05BC2894D59600546E8F /* AppDelegate.m */,
 				0ACA05BE2894D59600546E8F /* SceneDelegate.h */,
 				0ACA05BF2894D59600546E8F /* SceneDelegate.m */,
+				0A98B4DC28BA35CE001EE6FA /* BLTools.h */,
+				0A98B4DD28BA35CE001EE6FA /* BLTools.m */,
 				0ACA05F62894D88B00546E8F /* Base */,
 				0ACA05F72894D8A400546E8F /* Main */,
 				0ACA05C42894D59600546E8F /* Main.storyboard */,
@@ -197,6 +236,12 @@
 				0ACA05F92894DA7200546E8F /* BLBaseView.m */,
 				0ACA05F02894D79E00546E8F /* BaseViewController.h */,
 				0ACA05F12894D79E00546E8F /* BaseViewController.m */,
+				0AC9BD4929BCCDE700E83C6E /* EnterViewController.h */,
+				0AC9BD4A29BCCDE700E83C6E /* EnterViewController.m */,
+				0AC9BD4F29BCEC1600E83C6E /* HitMouseView.h */,
+				0AC9BD5029BCEC1600E83C6E /* HitMouseView.m */,
+				0AC9BD4C29BCDD5100E83C6E /* HitMouseViewController.h */,
+				0AC9BD4D29BCDD5100E83C6E /* HitMouseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -210,6 +255,29 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		A7F7D5D98E69826545B61303 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D550BDC4323054EC2F74EB4E /* Pods_BlueCat.framework */,
+				B983E2251D2B4FEBCEC1A739 /* Pods_BlueCat_BlueCatUITests.framework */,
+				B2B29C65B13737745E9AF488 /* Pods_BlueCatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9413D15D0299585B72000E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E06BE979B62425A1D8695C0F /* Pods-BlueCat.debug.xcconfig */,
+				76F3E0CEB772C8C801D442B2 /* Pods-BlueCat.release.xcconfig */,
+				4FFCDAE07FAC7155B585AD7D /* Pods-BlueCat-BlueCatUITests.debug.xcconfig */,
+				E5C1DB069294DD18F4F2CF83 /* Pods-BlueCat-BlueCatUITests.release.xcconfig */,
+				E91E4420A7F3F29185B29B1C /* Pods-BlueCatTests.debug.xcconfig */,
+				D697C0675E3F9734BB7D5B69 /* Pods-BlueCatTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ACA05E72894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCat" */;
 			buildPhases = (
+				4D6D840838A63284E2BE0B59 /* [CP] Check Pods Manifest.lock */,
 				0ACA05B42894D59600546E8F /* Sources */,
 				0ACA05B52894D59600546E8F /* Frameworks */,
 				0ACA05B62894D59600546E8F /* Resources */,
@@ -234,6 +303,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ACA05EA2894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCatTests" */;
 			buildPhases = (
+				A647AC9686EEE7EBD88CB46A /* [CP] Check Pods Manifest.lock */,
 				0ACA05CF2894D59600546E8F /* Sources */,
 				0ACA05D02894D59600546E8F /* Frameworks */,
 				0ACA05D12894D59600546E8F /* Resources */,
@@ -252,6 +322,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ACA05ED2894D59600546E8F /* Build configuration list for PBXNativeTarget "BlueCatUITests" */;
 			buildPhases = (
+				BDE2585449BECB6C15EB7A1D /* [CP] Check Pods Manifest.lock */,
 				0ACA05D92894D59600546E8F /* Sources */,
 				0ACA05DA2894D59600546E8F /* Frameworks */,
 				0ACA05DB2894D59600546E8F /* Resources */,
@@ -313,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2532E529BD0BBD0028876C /* check.json in Resources */,
 				0ACA05CB2894D59600546E8F /* LaunchScreen.storyboard in Resources */,
 				0ACA05C82894D59600546E8F /* Assets.xcassets in Resources */,
 				0ACA05C62894D59600546E8F /* Main.storyboard in Resources */,
@@ -335,22 +407,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D6D840838A63284E2BE0B59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlueCat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A647AC9686EEE7EBD88CB46A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlueCatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDE2585449BECB6C15EB7A1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlueCat-BlueCatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0ACA05B42894D59600546E8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC9BD4E29BCDD5100E83C6E /* HitMouseViewController.m in Sources */,
 				0ACA05F52894D7C300546E8F /* BLPlayViewController.m in Sources */,
 				0ACA05C32894D59600546E8F /* ViewController.m in Sources */,
 				0ACA06002894DBAD00546E8F /* BLActivityManager.m in Sources */,
 				0ACA05F22894D79E00546E8F /* BaseViewController.m in Sources */,
 				0ACA05BD2894D59600546E8F /* AppDelegate.m in Sources */,
+				0A98B4DB28BA3228001EE6FA /* BLSettingViewController.m in Sources */,
 				0ACA05CE2894D59600546E8F /* main.m in Sources */,
 				0ACA05C02894D59600546E8F /* SceneDelegate.m in Sources */,
 				0A4B5757289F6B3300977CEE /* BLActivitySetting.m in Sources */,
+				0A98B4DE28BA35CE001EE6FA /* BLTools.m in Sources */,
 				0ACA05FA2894DA7200546E8F /* BLBaseView.m in Sources */,
 				0ACA05FD2894DAB900546E8F /* BLCaptureView.m in Sources */,
 				0ACA06032894DCED00546E8F /* BLMainPlayView.m in Sources */,
+				0AC9BD5129BCEC1600E83C6E /* HitMouseView.m in Sources */,
+				0AC9BD4B29BCCDE700E83C6E /* EnterViewController.m in Sources */,
 				0AB0656128951616008911F6 /* BLCaptureRouteModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,13 +665,16 @@
 		};
 		0ACA05E82894D59600546E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06BE979B62425A1D8695C0F /* Pods-BlueCat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DZ7M4562PX;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = R72FV5KUZZ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BlueCat/BlueCat.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlueCat/Info.plist;
@@ -541,9 +690,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuanzhuan.BlueCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = GeneralApp_dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = generalApp_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -551,13 +701,16 @@
 		};
 		0ACA05E92894D59600546E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F3E0CEB772C8C801D442B2 /* Pods-BlueCat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DZ7M4562PX;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = R72FV5KUZZ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BlueCat/BlueCat.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlueCat/Info.plist;
@@ -573,9 +726,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LZ.BlueCat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuanzhuan.BlueCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = GeneralApp_dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = generalApp_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -583,6 +737,7 @@
 		};
 		0ACA05EB2894D59600546E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E91E4420A7F3F29185B29B1C /* Pods-BlueCatTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -600,6 +755,7 @@
 		};
 		0ACA05EC2894D59600546E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D697C0675E3F9734BB7D5B69 /* Pods-BlueCatTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -617,6 +773,7 @@
 		};
 		0ACA05EE2894D59600546E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFCDAE07FAC7155B585AD7D /* Pods-BlueCat-BlueCatUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -632,6 +789,7 @@
 		};
 		0ACA05EF2894D59600546E8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5C1DB069294DD18F4F2CF83 /* Pods-BlueCat-BlueCatUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

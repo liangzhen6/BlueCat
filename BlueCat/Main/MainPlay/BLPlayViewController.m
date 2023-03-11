@@ -22,7 +22,7 @@
     [self.view addSubview:mainView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backAction)];
-    tap.numberOfTapsRequired = 2;
+    tap.numberOfTouchesRequired = 2;
     [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view.
 }
