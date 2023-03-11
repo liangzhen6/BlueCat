@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A2532E529BD0BBD0028876C /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2532E429BD0BBD0028876C /* check.json */; };
+		0A2532E829BD0C5A0028876C /* BLCehckVerison.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2532E729BD0C5A0028876C /* BLCehckVerison.m */; };
 		0A4B5757289F6B3300977CEE /* BLActivitySetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B5756289F6B3300977CEE /* BLActivitySetting.m */; };
 		0A98B4DB28BA3228001EE6FA /* BLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A98B4DA28BA3228001EE6FA /* BLSettingViewController.m */; };
 		0A98B4DE28BA35CE001EE6FA /* BLTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A98B4DD28BA35CE001EE6FA /* BLTools.m */; };
@@ -55,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		0A2532E429BD0BBD0028876C /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		0A2532E629BD0C5A0028876C /* BLCehckVerison.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCehckVerison.h; sourceTree = "<group>"; };
+		0A2532E729BD0C5A0028876C /* BLCehckVerison.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCehckVerison.m; sourceTree = "<group>"; };
 		0A4B5755289F6B3300977CEE /* BLActivitySetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLActivitySetting.h; sourceTree = "<group>"; };
 		0A4B5756289F6B3300977CEE /* BLActivitySetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLActivitySetting.m; sourceTree = "<group>"; };
 		0A98B4D928BA3228001EE6FA /* BLSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLSettingViewController.h; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				0ACA05BF2894D59600546E8F /* SceneDelegate.m */,
 				0A98B4DC28BA35CE001EE6FA /* BLTools.h */,
 				0A98B4DD28BA35CE001EE6FA /* BLTools.m */,
+				0A2532E629BD0C5A0028876C /* BLCehckVerison.h */,
+				0A2532E729BD0C5A0028876C /* BLCehckVerison.m */,
 				0ACA05F62894D88B00546E8F /* Base */,
 				0ACA05F72894D8A400546E8F /* Main */,
 				0ACA05C42894D59600546E8F /* Main.storyboard */,
@@ -488,6 +493,7 @@
 				0ACA05F22894D79E00546E8F /* BaseViewController.m in Sources */,
 				0ACA05BD2894D59600546E8F /* AppDelegate.m in Sources */,
 				0A98B4DB28BA3228001EE6FA /* BLSettingViewController.m in Sources */,
+				0A2532E829BD0C5A0028876C /* BLCehckVerison.m in Sources */,
 				0ACA05CE2894D59600546E8F /* main.m in Sources */,
 				0ACA05C02894D59600546E8F /* SceneDelegate.m in Sources */,
 				0A4B5757289F6B3300977CEE /* BLActivitySetting.m in Sources */,
@@ -689,7 +695,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuanzhuan.BlueCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -725,7 +731,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuanzhuan.BlueCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

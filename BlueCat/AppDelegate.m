@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "BLActivityManager.h"
+#import "BLCehckVerison.h"
 #import <UMCommon/UMCommon.h>
 
 @interface AppDelegate ()
@@ -21,6 +22,8 @@
     [BLActivityManager shareManager];
     
     [UMConfigure initWithAppkey:@"640cce49ba6a5259c41b4408" channel:@"App Store"];
+    
+    [BLCehckVerison startCehckVersion];
     
     return YES;
 }
