@@ -11,6 +11,7 @@
 @interface HitMouseView ()
 @property (nonatomic, strong) UIImageView *mouse;
 @property (nonatomic, assign) BOOL isShow;
+@property (nonatomic, strong) UIView *redPoint;
 @end
 
 @implementation HitMouseView
@@ -18,6 +19,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
+        [self readPointFlash];
     }
     return self;
 }
@@ -39,7 +41,11 @@
     mouse.image = [UIImage imageNamed:@"mouse"];
     [backView addSubview:mouse];
     self.mouse = mouse;
-  
+    
+    UIView *redPoint = [[UIView alloc] initWithFrame:CGRectMake((88-10)/2, 5, 10, 10)];
+    redPoint.backgroundColor = [UIColor redColor];
+    [mouse addSubview:redPoint];
+    self.redPoint = redPoint;
     
     UIImageView *hole = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topHole.frame) - 11, 150, 32)];
     hole.image = [UIImage imageNamed:@"hole"];
@@ -52,6 +58,14 @@
     [self mouseMove];
 }
 
+
+
+- (void)readPointFlash {
+    self.redPoint.hidden = !self.redPoint.hidden;
+        
+    [self performSelector:@selector(readPointFlash) withObject:nil afterDelay:0.2];
+    
+}
 
 
 - (void)mouseMove {

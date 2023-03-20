@@ -6,6 +6,8 @@
 //
 
 #import "BLCaptureView.h"
+#import "NSData+ImageContentType.h"
+#import "UIImage+GIF.h"
 
 @interface BLCaptureView ()
 @property (nonatomic, strong) UIImageView *backImageView;
@@ -29,7 +31,11 @@
     if (!backImage) {
         NSString *path = [kDocument stringByAppendingPathComponent:name];
         NSData *imageData = [NSData dataWithContentsOfFile:path];
-        backImage = [UIImage imageWithData:imageData];
+        
+        backImage = [UIImage sd_imageWithGIFData:imageData];
+        if (!backImage) {
+            backImage = [UIImage imageWithData:imageData];
+        }        
     }
     
     if (backImage) {

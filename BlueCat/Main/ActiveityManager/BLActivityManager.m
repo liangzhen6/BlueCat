@@ -79,18 +79,27 @@ static BLActivityManager * _manager;
     }
     
     double angle = 0;
-    if (fabs(translation.y) >= fabs(translation.x)) {
-        if (translation.y >= 0) {
-            angle = M_PI;
-        } else {
-            angle = 0;
-        }
-    } else {
-        if (translation.x >= 0) {
-            angle = M_PI_2;
-        } else {
-            angle = M_PI_2 + M_PI;
-        }
+//    if (fabs(translation.y) >= fabs(translation.x)) {
+//        if (translation.y >= 0) {
+//            angle = M_PI;
+//        } else {
+//            angle = 0;
+//        }
+//    } else {
+//        if (translation.x >= 0) {
+//            angle = M_PI_2;
+//        } else {
+//            angle = M_PI_2 + M_PI;
+//        }
+//    }
+    
+    
+    if (translation.x < 0) {
+        angle = 0;
+    }
+    
+    if (translation.x > 0) {
+        angle = M_PI;
     }
     
     CGFloat centerX = center.x + translation.x;

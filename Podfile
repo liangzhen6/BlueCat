@@ -8,6 +8,8 @@ target 'BlueCat' do
   # Pods for BlueCat
    pod 'UMCommon'
    pod 'UMDevice'
+   
+   pod 'SDWebImage'
 
   target 'BlueCatTests' do
     inherit! :search_paths

@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nullable UIImage *)getImageWithName:(NSString *)name;
 
++ (nullable NSData *)getImageDataWithName:(NSString *)name;
+
 @end
 
 NS_ASSUME_NONNULL_END

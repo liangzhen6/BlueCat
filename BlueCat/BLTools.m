@@ -22,4 +22,11 @@
     return image;
 }
 
++ (nullable NSData *)getImageDataWithName:(NSString *)name {
+    
+    NSString *path = [kDocument stringByAppendingPathComponent:name];
+    NSData *imageData = [NSData dataWithContentsOfFile:path];
+    return imageData;
+}
+
 @end

@@ -6,6 +6,8 @@
 //
 
 #import "BLMainPlayView.h"
+#import "NSData+ImageContentType.h"
+#import "UIImage+GIF.h"
 
 @interface BLMainPlayView ()
 @property (nonatomic, strong) BLCaptureView *captureView;
@@ -37,7 +39,11 @@
     if (!backImage) {
         NSString *path = [kDocument stringByAppendingPathComponent:name];
         NSData *imageData = [NSData dataWithContentsOfFile:path];
-        backImage = [UIImage imageWithData:imageData];
+        
+        backImage = [UIImage sd_imageWithGIFData:imageData];
+        if (!backImage) {
+            backImage = [UIImage imageWithData:imageData];
+        }
     }
     
     if (backImage) {
@@ -82,9 +88,9 @@
 - (void)updateCaptureViewCenter:(CGPoint)center angle:(double)angle {
     self.captureView.center = center;
     
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    transform = CGAffineTransformRotate(transform, angle);
-    self.captureView.transform = transform;
+    CATransform3D transform = CATransform3DIdentity;
+    transform = CATransform3DMakeRotation(angle, 0, 1, 0);
+    self.captureView.layer.transform = transform;
     
 }
 

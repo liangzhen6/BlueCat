@@ -7,8 +7,13 @@
 
 #import "BLSettingViewController.h"
 #import "BLActivityManager.h"
+#import "NSData+ImageContentType.h"
+#import "UIImage+GIF.h"
+#import <PhotosUI/PhotosUI.h>
+#import <Photos/Photos.h>
+#import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 
-@interface BLSettingViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface BLSettingViewController ()<PHPickerViewControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *captureView;
@@ -18,6 +23,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *captureH;
 
 @property (weak, nonatomic) IBOutlet UIImageView *zoomView;
+
+@property (nonatomic, strong) NSData *captureImageData;
+@property (nonatomic, strong) NSData *backImageData;
 
 @property (nonatomic, assign) BOOL updatedBackImage;
 @property (nonatomic, assign) BOOL updatedCaptureImage;
@@ -29,13 +37,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.backImageView.image = [BLTools getImageWithName:BLActivityManager.shareManager.setting.mainImage];
+    NSData *backImageData = [BLTools getImageDataWithName:BLActivityManager.shareManager.setting.mainImage];
+    UIImage *backImage = [UIImage sd_imageWithGIFData:backImageData];
+    if (backImage) {
+        self.backImageView.image = backImage;
+    } else {
+        self.backImageView.image = [BLTools getImageWithName:BLActivityManager.shareManager.setting.mainImage];
+    }
     
     
     self.captureW.constant = BLActivityManager.shareManager.setting.captureW;
     self.captureH.constant = BLActivityManager.shareManager.setting.captureH;
     
-    self.captureView.image = [BLTools getImageWithName:BLActivityManager.shareManager.setting.captureImage];
+    
+    NSData *captureImageData = [BLTools getImageDataWithName:BLActivityManager.shareManager.setting.captureImage];
+    UIImage *captureImage = [UIImage sd_imageWithGIFData:captureImageData];
+    if (captureImage) {
+        // gif
+        self.captureView.image = captureImage;
+    } else {
+        self.captureView.image = [BLTools getImageWithName:BLActivityManager.shareManager.setting.captureImage];
+    }
     
     
     UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragViewDidDrag:)];
@@ -53,18 +75,14 @@
     
     if (sender.tag == 1) {
         // 去相册选图
-        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-        imagePickerController.delegate = self;
-        imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        imagePickerController.title = @"选择背景";
-        [self presentViewController:imagePickerController animated:YES completion:nil];
+        [self showImageSelectVC:@"选择背景"];
     }
     
     
     if (sender.tag == 3) {
         // 设置好了
         if (self.updatedBackImage) {
-            NSData *imageData = UIImageJPEGRepresentation(self.backImageView.image, 0.8);
+            NSData *imageData = self.backImageData;
             NSString *name = @"mainImage";
             NSString *path = [kDocument stringByAppendingPathComponent:name];
             BOOL isOK = [imageData writeToFile:path atomically:YES];
@@ -75,7 +93,7 @@
         }
         
         if (self.updatedCaptureImage) {
-            NSData *imageData = UIImageJPEGRepresentation(self.captureView.image, 0.8);
+            NSData *imageData = self.captureImageData;
             NSString *name = @"captureImage";
             NSString *path = [kDocument stringByAppendingPathComponent:name];
             BOOL isOK = [imageData writeToFile:path atomically:YES];
@@ -95,13 +113,25 @@
 }
 
 - (void)tapAction {
-    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.delegate = self;
-    imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    imagePickerController.title = @"选择小球";
-    [self presentViewController:imagePickerController animated:YES completion:nil];
+    
+    [self showImageSelectVC:@"选择小球"];
     
 }
+
+
+- (void)showImageSelectVC:(NSString *)title {
+    PHPickerFilter *filter = [PHPickerFilter anyFilterMatchingSubfilters:@[PHPickerFilter.imagesFilter]];
+    
+    PHPickerConfiguration *config = [[PHPickerConfiguration alloc] init];
+    config.filter= filter;
+    config.preferredAssetRepresentationMode = PHPickerConfigurationAssetRepresentationModeCurrent;
+    
+    PHPickerViewController *pickerVC = [[PHPickerViewController alloc] initWithConfiguration:config];
+    pickerVC.title = title;
+    pickerVC.delegate = self;
+    [self presentViewController:pickerVC animated:YES completion:nil];
+}
+
 
 
 - (void)dragViewDidDrag:(UIPanGestureRecognizer *)pan {
@@ -121,29 +151,67 @@
 }
 
 
+#pragma mark --PHPickerViewControllerDelegate
+- (void)picker:(PHPickerViewController *)picker didFinishPicking:(NSArray<PHPickerResult *> *)results {
+    if (results && results.count) {
+        PHPickerResult *result = [results firstObject];
+        NSItemProvider *itemProvoider = result.itemProvider;
+        
+        NSString *itemTypeIdentifier = itemProvoider.registeredTypeIdentifiers.firstObject;
+        NSString *typeIdentifier = UTTypeGIF.identifier;
 
-
-#pragma mark -UINavigationControllerDelegate,UIImagePickerControllerDelegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    if ([picker.title isEqualToString:@"选择背景"]) {
-        self.backImageView.image = image;
-        self.updatedBackImage = YES;
-    }
-    
-    if ([picker.title isEqualToString:@"选择小球"]) {
-        self.captureView.image = image;
-        self.updatedCaptureImage = YES;
+        if ([itemTypeIdentifier isEqualToString:UTTypeGIF.identifier]) {
+            [itemProvoider loadItemForTypeIdentifier:UTTypeGIF.identifier options:nil completionHandler:^(__kindof id<NSSecureCoding>  _Nullable item, NSError * _Null_unspecified error) {
+                NSLog(@"777");
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSData *imageData = [NSData dataWithContentsOfFile:[(NSURL *)item path]];
+                    if ([picker.title isEqualToString:@"选择背景"]) {
+                        UIImage *image = [UIImage sd_imageWithGIFData:imageData];
+                        self.backImageView.image = image;
+                        self.updatedBackImage = YES;
+                        self.backImageData = imageData;
+                    }
+                    
+                    if ([picker.title isEqualToString:@"选择小球"]) {
+                        UIImage *image = [UIImage sd_imageWithGIFData:imageData];
+                        self.captureView.image = image;
+                        self.updatedCaptureImage = YES;
+                        self.captureImageData = imageData;
+                    }
+                    
+                    
+                });
+            }];
+        } else {
+            [itemProvoider loadObjectOfClass:[UIImage class] completionHandler:^(__kindof id<NSItemProviderReading>  _Nullable object, NSError * _Nullable error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if ([object isKindOfClass:[UIImage class]]) {
+                        NSData *imageData = UIImageJPEGRepresentation(object, 0.8);
+                        if ([picker.title isEqualToString:@"选择背景"]) {
+                            UIImage *image = (UIImage *)object;
+                            self.backImageView.image = image;
+                            self.updatedBackImage = YES;
+                            self.backImageData = imageData;
+                        }
+                        
+                        if ([picker.title isEqualToString:@"选择小球"]) {
+                            UIImage *image = (UIImage *)object;
+                            self.captureView.image = image;
+                            self.updatedCaptureImage = YES;
+                            self.captureImageData = imageData;
+                        }
+                        
+                    }
+                });
+            }];
+        }
+        
     }
     
     // 选取完图片后跳转回原控制器
     [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 

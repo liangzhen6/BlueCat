@@ -1,21 +1,27 @@
 PODS:
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
   - UMCommon (7.3.8):
     - UMDevice
   - UMDevice (2.2.1)
 
 DEPENDENCIES:
+  - SDWebImage
   - UMCommon
   - UMDevice
 
 SPEC REPOS:
   trunk:
+    - SDWebImage
     - UMCommon
     - UMDevice
 
 SPEC CHECKSUMS:
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
   UMCommon: fdb5bac9e7ec2aca4f9cfc0febf414b59ed302cb
   UMDevice: 053478c4b4d7292f31f0a275c227d3c4007a5571
 
-PODFILE CHECKSUM: 09a5b51f7700961d4c0490aba1ddc90f96db3c45
+PODFILE CHECKSUM: 15f016f93316c1b5e3e98e7b386c30043f3e4868
 
 COCOAPODS: 1.11.3
